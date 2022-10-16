@@ -1,0 +1,478 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+   
+  </head>
+  <style>
+    @import url("https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap");
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: "Josefin Sans", sans-serif;
+    }
+
+    .section-one {
+      height: 100vh;
+    }
+    ul {
+      display: flex;
+      z-index: 2;
+    }
+    li {
+      list-style-type: none;
+      background-color: white;
+      box-shadow: (0, 0, 0, 0.7);
+      padding: 10px 40px;
+      border-radius: 25px;
+      margin: 0px 20px;
+    }
+    li.active {
+      text-decoration: underline;
+      background-color: black;
+      color: white;
+
+      transition: 0.5s;
+      cursor: pointer;
+
+      border-radius: 25px;
+    }
+    /* li:hover {
+      text-decoration: underline;
+      background-color: black;
+      color: white;
+      box-shadow: (0, 0, 0, 0.7);
+      padding: 10px 40px;
+      transition: 0.5s;
+      cursor: pointer;
+      transform: scale(1.2);
+      border-radius: 25px;
+    } */
+    .nav-bar {
+      height: 60px;
+      background-color: white;
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      padding-right: 50px;
+    }
+    .section-one-card {
+      height: calc(100vh - 60px);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: relative;
+      overflow-x: hidden;
+      overflow-y: hidden;
+    }
+    .section-sub-card1 {
+      width: 40%;
+      display: flex;
+      justify-content: center;
+
+      flex-direction: column;
+      gap: 40px;
+      z-index: 1;
+    }
+    .section-sub-card2 {
+      width: 50%;
+      height: calc(100vh - 60px);
+
+      overflow: hidden; /* why it is overflowing */
+    }
+    .section-sub-card1 h1 {
+      font-size: 60px;
+      font-weight: bold;
+      line-height: 80px;
+    }
+    .section-sub-card2 img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+  i {
+      position: absolute;
+      background-color: yellow;
+      display: block;
+      border-radius: 20px 5px 50px 10px;
+    }
+    i:nth-child(5n + 3) {
+      background-color: greenyellow;
+    }
+    i:nth-child(5n + 6) {
+      background-color: rgb(145, 145, 228);
+    }
+    i:nth-child(5n + 9) {
+      background-color: rgba(252, 182, 157, 0.745);
+    }
+    .section-two {
+      background-color: black;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+    }
+
+    .sec-two-sub-con {
+      height: 100vh;
+
+      width: 95%;
+      justify-content: space-evenly;
+      flex-wrap: wrap;
+      display: flex;
+      align-items: center;
+    }
+
+    .section-two-cards {
+      flex: 0 400px;
+      height: 200px;
+      background-color: white;
+      border-radius: 20px;
+      transition: 0.5s;
+      display: flex;
+      flex-direction: column;
+      gap: 30px;
+      padding: 15px 20px;
+    }
+    .section-two-cards:hover {
+      height: 250px;
+      cursor: pointer;
+    }
+
+    .section-two-cards:hover button {
+      visibility: visible;
+      opacity: 1;
+     
+    }
+    .sec-tow-cards-con {
+      height: 250px;
+      flex: 0 400px;
+    }
+    .btns {
+      display: flex;
+    }
+    button {
+      background-color: white;
+      box-shadow: (0, 0, 0, 0.7);
+      padding: 6px 40px;
+      border-radius: 5px;
+      margin-right: 20px;
+      visibility: hidden;
+      opacity: 0;
+      transition: 0.4s;
+     
+
+    }
+    .footer-container{
+      display: flex;
+      justify-content: space-around;
+      color: black;
+      height: 25vh;
+      align-items: center;
+    }
+    .section-three{
+      height: 50vh;
+      background-color: white;
+    }
+    hr{
+      width: 90%;
+      background-color: black;
+    
+    }
+    .line{
+      display: flex;
+      justify-content: center;
+    }
+  
+    .incons-container{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 20vh;
+    }
+    .icons-card img{
+        width: 30px;
+        height: 30px;
+        margin: 0px 10px;
+    }
+    .copyrights-con{
+        display: flex;
+        justify-content: center;
+    }
+  </style>
+  <body>
+    <div class="container">
+      <div class="section-one">
+        <div class="nav-bar">
+          <ul>
+            <li class="active">About</li>
+            <li>Images</li>
+            <li>Contact</li>
+            <li>Email</li>
+            <li>Phone</li>
+          </ul>
+        </div>
+        <div class="section-one-card">
+          <div class="section-sub-card1">
+            <h1>Welcome to Shoping</h1>
+            <p>
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sit
+              alias culpa distinctio, deleniti id quibusdam cumque in vitae
+              ducimus illo.
+            </p>
+            <div class="btns">
+              <button>Add to cart</button>
+              <button>Buy now</button>
+            </div>
+          </div>
+          <div class="section-sub-card2">
+            <img src="./images/shopGirl.jpg" alt="" />
+          </div>
+        </div>
+      </div>
+      <div class="section-two">
+        <div class="sec-two-sub-con">
+          <div class="sec-tow-cards-con">
+            <div class="section-two-cards">
+              <h1>Product 1</h1>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo
+                tempore, voluptatum magni eaque alias, totam quam ipsa voluptas
+                deserunt, laborum nesciunt amet itaque ullam? Inventore delectus
+                quod quos cum quaerat!consectetur adipisicing elit. Sit alias
+                culpa distinctio,
+              </p>
+              <div class="btns">
+                <button>Add to cart</button>
+              <button>Buy now</button>
+              </div>
+            </div>
+          </div>
+          <div class="sec-tow-cards-con">
+            <div class="section-two-cards">
+              <h1>Product 2</h1>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo
+                tempore, voluptatum magni eaque alias, totam quam ipsa voluptas
+                deserunt, laborum nesciunt amet itaque ullam? Inventore delectus
+                quod quos cum quaerat!consectetur adipisicing elit. Sit alias
+                culpa distinctio,
+              </p>
+              <div class="btns">
+                <button>Add to cart</button>
+              <button>Buy now</button>
+              </div>
+            </div>
+          </div>
+          <div class="sec-tow-cards-con">
+            <div class="section-two-cards">
+              <h1>Product 3</h1>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo
+                tempore, voluptatum magni eaque alias, totam quam ipsa voluptas
+                deserunt, laborum nesciunt amet itaque ullam? Inventore delectus
+                quod quos cum quaerat!consectetur adipisicing elit. Sit alias
+                culpa distinctio,
+              </p>
+              <div class="btns">
+                <button>Add to cart</button>
+              <button>Buy now</button>
+              </div>
+            </div>
+          </div>
+          <div class="sec-tow-cards-con">
+            <div class="section-two-cards">
+              <h1>Product 4</h1>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo
+                tempore, voluptatum magni eaque alias, totam quam ipsa voluptas
+                deserunt, laborum nesciunt amet itaque ullam? Inventore delectus
+                quod quos cum quaerat!consectetur adipisicing elit. Sit alias
+                culpa distinctio,
+              </p>
+              <div class="btns">
+                <button>Add to cart</button>
+                <button>Buy now</button>
+              </div>
+            </div>
+          </div>
+          <div class="sec-tow-cards-con">
+            <div class="section-two-cards">
+              <h1>Product 5</h1>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo
+                tempore, voluptatum magni eaque alias, totam quam ipsa voluptas
+                deserunt, laborum nesciunt amet itaque ullam? Inventore delectus
+                quod quos cum quaerat!consectetur adipisicing elit. Sit alias
+                culpa distinctio,
+              </p>
+              <div class="btns">
+                <button>Add to cart</button>
+              <button>Buy now</button>
+              </div>
+            </div>
+          </div>
+          <div class="sec-tow-cards-con">
+            <div class="section-two-cards">
+              <h1>Product 6</h1>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo
+                tempore, voluptatum magni eaque alias, totam quam ipsa voluptas
+                deserunt, laborum nesciunt amet itaque ullam? Inventore delectus
+                quod quos cum quaerat!consectetur adipisicing elit. Sit alias
+                culpa distinctio,
+              </p>
+              <div class="btns">
+                <button>Add to cart</button>
+                <button>Buy now</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="section-three">
+        <div class="footer-container">
+          <div class="footer-cards">
+            <h1>Logo</h1>
+            <p>Company Slogan</p>
+          </div>
+          <div class="footer-cards">
+            <p>website thems</p>
+            <p>lorem  eodn3i</p>
+            <p>2nnoiwdnoi hfd</p>
+          </div>
+          <div class="footer-cards">
+            <p>iu3fwhu3henfiu</p>
+            <p>femfkmewkmfok</p>
+          </div>
+          <div class="footer-cards">
+            <p>dnkjnkjqwndjkn</p>
+            <p>fnnweklfklme</p>
+          </div>
+          <div class="footer-cards">
+            <p>wbjfjdnejk</p>
+            <p>nkodnwmk</p>
+            <p>konwfkkwnd</p>
+            <p>kmndvmkm</p>
+          </div>
+        </div>
+    <div class="line">
+      <hr>
+    </div>
+    <div class="incons-container">
+<div class="icons-card">
+    <img src="./images/facebook.svg" alt="">
+    <img src="./images/instagram.svg" alt="">
+    <img src="./images/twitter.svg" alt="">
+    <img src="./images/youtube.svg" alt="">
+</div>
+
+    </div>
+    <div class="copyrights-con">
+        <div class="copy-card">
+            <p>All rights recived Ebin Joe</p>
+        </div>
+    </div>
+      </div>
+    </div>
+    <script>
+      let list = document.querySelectorAll("li");
+
+      for (i = 0; i < list.length; i++) {
+        list[i].addEventListener("mouseover", function () {
+          for (j = 0; j < list.length; j++) {
+            list[j].style.backgroundColor = "";
+            list[j].style.transition = "0.5s";
+            list[j].style.color = "black";
+            list[j].style.transform = "scale(1)";
+            list[j].classList.remove("active");
+          }
+          this.style.backgroundColor = "black";
+          this.style.transition = "0.5s";
+          this.style.color = "white";
+          this.style.cursor = "pointer";
+          this.style.transform = "scale(1.2)";
+        });
+        list[i].addEventListener("click", function () {
+          for (j = 0; j < list.length; j++) {
+            list[j].classList.remove("active");
+          }
+          this.classList.add("active");
+          this.style.transform = "scale(1)";
+        });
+      }
+
+      //   let box = document.querySelectorAll("li");
+
+      //   for (i = 0; i < box.length; i++) {
+      //     box[i].addEventListener("click", ()=> {
+      //       for (j = 0; j < box.length; j++) {
+      //         box[j].classList.remove("active");
+      //       }
+      //       this.classList.add("active");
+      //     });
+      //   }
+
+      // animation Script
+
+      function wave() {
+        let whole = document.querySelector(".section-one");
+        let wave = 20;
+        let width = document.querySelector(".section-one-card").offsetWidth;
+        let height = document.querySelector(".section-one-card").offsetHeight;
+
+        console.log(width);
+        console.log(height);
+        for (i = 0; i < wave; i++) {
+          let element = document.createElement("i");
+          let size = Math.random() * 100;
+          let posX = Math.floor(Math.random() * width);
+          let posY = Math.floor(Math.random() * height);
+          element.style.width = `${size}px`;
+          element.style.height = `${size}px`;
+
+          element.style.cursor = "pointer";
+          element.style.left = `${posX - 100}px`;
+          element.style.top = `${posY - 100}px`;
+          // if (posX > width - 150) {
+
+          // } else {
+          //   element.style.left = posX + "px";
+          // }
+
+          // if (posY > height - 100) {
+
+          // } else {
+          //   element.style.top = `${posY}px`;
+          // }
+
+          whole.appendChild(element);
+        }
+      }
+      wave();
+
+      let waves = document.querySelectorAll("i");
+
+      for (j = 0; j < waves.length; j++) {
+        waves[j].addEventListener("mouseover", function () {
+          let width = document.querySelector(".section-one-card").offsetWidth;
+          let height = document.querySelector(".section-one-card").offsetHeight;
+          let posX = Math.floor(Math.random() * width);
+          let posY = Math.floor(Math.random() * height);
+          for (m = 0; m < waves.length; m++) {
+            waves[m].style.transition = "0.5s";
+            waves[m].style.transform = null;
+          }
+          this.style.transform = "scale(0)";
+          this.style.transition = "0.1s";
+          this.style.cursor = "pointer";
+        });
+      }
+    </script>
+  </body>
+</html>
